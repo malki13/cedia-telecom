@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: gestion-service
+  cloud:
+    config:
+      enable: true
+      uri: http://localhost:8082
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: postgres
+    url: jdbc:postgresql://localhost:5434/db_gestion
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    database: POSTGRESQL
+    show-sql: true
+    generate-ddl: false
+    hibernate:
+      ddl-auto: update
+      #      ddl-auto: ${DB_ACTION}
+      format-sql: true
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl
+      enable-lazy-load-no-trans: true
+    properties.hibernate:
+      enable_lazy_load_no_trans: true

@@ -1,0 +1,15 @@
+server:
+  port: 8082
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          default-label: main
+          uri: https://github.com/malki13/cedia-telecom
+          search-paths: config-data
+#          strictHostKeyChecking: false
+#          username: malki13
+#          password: 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
+  application:
+    name: config-service
