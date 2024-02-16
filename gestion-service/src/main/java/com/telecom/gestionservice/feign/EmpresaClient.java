@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 //@FeignClient(name = "administracion-service",url = "http://localhost:8001")
 //@RequestMapping("/administracion")
-@FeignClient(name = "administracion-service",
-        url = "http://localhost:8001",
+@FeignClient(name = "administracion-service"/*,
+        url = "http://localhost:8001"*/,
 //        url = "http://backendgestion:8091",
         path = "/administracion")
 public interface EmpresaClient {
